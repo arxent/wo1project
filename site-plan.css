@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita|Biryani');
+
+:root {
+  --primary-color: #909CC2;
+  --secondary-color: #FE938C;
+  --accent1-color: #2D3047;
+  --accent2-color: #FBFFF1;
+  
+  --heading-font: "Sansita";
+  --paragraph-font: Biryani, Lustria, sans-serif;
+  
+  --headline-color-on-white: black;
+  --headline-color-on-color: #FFFFFF;
+  --paragraph-color-on-white: black;
+  --paragraph-color-on-color: #FFFFFF;
+  --footer-background-color: #227C9D;
+  --text-background-color: #000000;
+  --nav-link-color: #FFFFFF;
+  --nav-background-color: #FE938C;
+  --nav-hover-link-color: #000000;
+  --nav-hover-background-color: #FBFFF1; 
+}
+
+
+
+html {
+  background-color: var(--primary-color);
+}
+body {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1em;
+}
+img {
+  max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--paragraph-color-on-color);
+  background-color: var(--text-background-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+  padding: 1em;
+}
+
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+
+p.colored {
+  background-color: var(--text-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+nav {
+  background-color: var(--footer-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+nav > ul {
+  list-style-type: none;
+  display: flex;
+
+}
+nav a {
+  padding:1em;
+  min-width: 70px;
+}
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.sitemap {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+
+  text-align: center;
+
+}
+.sm-home {
+  grid-area: home;
+  background-color: #999;
+  line-height: 3em;
+}
+.sm-page2 {
+  grid-area: page2;
+  background-color: #999;
+  line-height: 3em;
+}
+.sm-page3 {
+  grid-area: page3;
+  background-color: #999;
+  line-height: 3em;
+}
+
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+.icon {
+  position: relative;
+  top: 5px;
+  left: 230px;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  position: relative;
+  top: 5px;
+  left: 287px;
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+  position: relative;
+  top: 5px;
+  right: 160px;
+  background: #125688;
+  color: white;
+}
+.fa-twitter {
+  position: relative;
+  top: 5px;
+  left: 64px;
+  background: #55ACEE;
+  color: white;
+}
